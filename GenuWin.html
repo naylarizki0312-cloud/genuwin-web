@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genuwin - Genuine With Us</title>
+    
+    <link rel="icon" href="../uts5a/imagesuts/pavicon.png" type="image/png">
+    
+    <link rel="stylesheet" href="GenuWin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="GenuWin.html">
+                <img src="../uts5a/imagesuts/logo.png" alt="Genuwin Logo" class="img-logo">
+             </a>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <!-- Dropdown About -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="profil.html">Profil</a>
+                    <a href="sejarah.html">Sejarah</a>
+                    <a href="visi-misi.html">Visi Misi</a>
+                    <a href="tujuan.html">Tujuan</a>
+                    <a href="struktur.html">Struktur</a>
+                </div>
+            </li>
+            <li><a href="fabu.html">FABU</a></li>
+            <li><a href="mentor.html">Mentor Unggulan</a></li>
+            <li><a href="ruang-belajar.html">Ruang Belajar</a></li>
+            <li><a href="ruang-uji.html">Ruang Uji</a></li>
+            <li><a href="ukbi.html">UKBI Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="subs.html" class="btn-subscribe">Subscribe</a>
+            <a href="login.html" class="btn-login">Masuk/Daftar</a>
+        </div>
+    </nav>
+
+    <!-- Layout Dua Kolom: Main Body & Sidebar -->
+    <div class="container-layout">
+        
+        <!-- MAIN BODY (Kiri) -->
+        <main class="main-body">
+            <!-- Hero Section -->
+            <header class="hero">
+                <h2>Hi Survivor!</h2>
+                <p>Mau mulai dari mana?</p>
+            </header>
+
+            <!-- Search & Filter Section -->
+            <section class="search-filter-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Cari tahu di sini">
+                </div>
+                <div class="filter-box">
+                    <label for="kategori-kelas">Pilih Kategori:</label>
+                    <select id="kategori-kelas">
+                        <option value="S1">S1</option>
+                        <option value="S2">S2</option>
+                        <option value="S3">S3</option>
+                        <option value="pegawai">Pegawai KEMENDIKDASMEN</option>
+                    </select>
+                    <button class="btn-simpan">Simpan</button>
+                </div>
+            </section>
+
+            <!-- Section Artikel  -->
+            <section class="artikel-section">
+                <h3 class="section-title">Informasi & Artikel Terbaru</h3>
+                <div class="artikel-list">
+                    <article class="artikel-card">
+                        <h4><a href="artikel-1.html">Tips Lolos Beasiswa Unggulan 2026</a></h4>
+                        <p>Persiapkan berkas dan wawancara kamu dengan strategi jitu dari para mentor kami...</p>
+                        <a href="artikel-1.html" class="read-more">Read More &raquo;</a>
+                    </article>
+                    <article class="artikel-card">
+                        <h4><a href="artikel-2.html">Jumlah Kuota Beasiswa Unggulan 2026, Ini Perkiraannya</a></h4>
+                        <p>Simak perkiraan jumlah kuota dan analisis persiapan untuk pendaftaran Beasiswa Unggulan tahun ini...</p>
+                        <a href="artikel-2.html" class="read-more">Read More &raquo;</a>
+                    </article>
+                    <article class="artikel-card">
+                        <h4><a href="artikel-3.html">Kisah Sukses: Dari FABU ke Luar Negeri</a></h4>
+                        <p>Simak perjalanan inspiratif member FABU yang berhasil menembus beasiswa penuh...</p>
+                        <a href="artikel-3.html" class="read-more">Read More &raquo;</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- UKBI Center Section -->
+            <section class="ukbi-section">
+                <h3 class="section-title">UKBI Center</h3>
+                <p class="section-subtitle">Materi yang diujikan di UKBI terdiri dari 5 Seksi:</p>
+                <div class="card-grid">
+                    <div class="card"><div class="icon">🎧</div><h4>Seksi 1</h4><p>Mendengarkan</p></div>
+                    <div class="card"><div class="icon">📝</div><h4>Seksi 2</h4><p>Merespon Kaidah</p></div>
+                    <div class="card"><div class="icon">📖</div><h4>Seksi 3</h4><p>Membaca</p></div>
+                    <div class="card"><div class="icon">✍️</div><h4>Seksi 4</h4><p>Menulis</p></div>
+                    <div class="card"><div class="icon">🗣️</div><h4>Seksi 5</h4><p>Berbicara</p></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h4>Statistik</h4>
+                <!-- Menampilkan Pengunjung Unik Hari Ini -->
+                <p>👥 Pengunjung Hari Ini: 
+                    <strong>
+                        <!-- Counter API (Hari Ini) -->
+                        <img src="https://counter.getsandbox.com/count/genuwin-today.png" alt="Pengunjung Hari Ini" style="height: 15px; vertical-align: middle;">
+                    </strong>
+                </p>
+                <!-- Menampilkan Total Pengunjung Keseluruhan -->
+                <p>📈 Total Pengunjung: 
+                    <strong>
+                        <!-- Counter API (Total) -->
+                        <img src="https://counter.getsandbox.com/count/genuwin-total.png" alt="Total Pengunjung" style="height: 15px; vertical-align: middle;">
+                    </strong>
+                </p>
+            </div>
+            
+            <div class="widget">
+                <h4>Profil Founder</h4>
+                <div class="founder-profile">
+                    <img src="../uts5a/imagesuts/nayla.png" alt="Nayla" class="profil-img">
+                    <p><strong>Nayla Rizki Asri Ainun</strong></p>
+                    <p>Mahasiswi UIN Syarif Hidayatullah Jakarta. Founder GenuWin.</p>
+                </div>
+            </div>
+            
+            <div class="widget">
+                <h4>Video Edukasi</h4>
+                 <!-- Video Embed Youtube -->
+                  <iframe width="100%" height="200" src="https://www.youtube.com/embed/491oBnu5_uQ?si=B2EUgAYFrRMKmMad" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+></iframe>
+            </div>
+
+            <div class="widget">
+                <h4>Statistik</h4>
+                <p>👥 Pengunjung Hari Ini: <strong>142</strong></p>
+                <p>📈 Total Pengunjung: <strong>15,024</strong></p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- App Promo Section (Dengan BG Foto) -->
+    <section class="app-promo" style="background-image: url('imagesuts/awardee.jpg');">
+        <div class="promo-overlay">
+            <div class="promo-content">
+                <h3>Belajar makin mudah dengan Aplikasi Genuwin!</h3>
+                <p>Unduh sekarang di Google Playstore untuk pengalaman belajar terbaik.</p>
+                <button id="playstore-btn" class="btn-playstore">▶️ Dapatkan di Google Play</button>
+            </div>
+            <div class="promo-image">
+                <!-- Gambar HP/APK nya -->
+                <img src="../uts5a/imagesuts/mobileapss.png" alt="Tampilan Aplikasi Genuwin">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-us">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Hubungi Kami</h3>
+                <p><strong>Let's Be Genuine With Me!</strong></p>
+                <p>👤 Nayla Rizki Asri Ainun</p>
+                <p>✉️ naylarizki0312@gmail.com</p>
+                <p>🏛️ UIN Syarif Hidayatullah Jakarta</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/shazshalsme/">Instagram</a> | <a href="https://www.linkedin.com/in/nayla-rizki-asri-ainun-salsabila-syeh-93a704329/">LinkedIn</a> | <a href="https://www.threads.com/@shazshalsme">Threads</a> | <a href="https://www.youtube.com/@forum.awardee.beasiswaunggulan">YouTube</a>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="email@contoh.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="institusi">Asal Institusi</label>
+                        <input type="text" id="institusi" placeholder="Sekolah/Universitas/Instansi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-kirim">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Baru -->
+    <footer class="site-footer">
+        <p>&copy; 2026 GenuWin. All Rights Reserved.</p>
+        <p>Designed by <strong>Nayla Rizki Asri Ainun</strong></p>
+    </footer>
+
+    <!-- Floating WA -->
+    <a href="https://wa.me/628123456789" class="floating-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="GenuWin.js"></script>
+</body>
+</html>

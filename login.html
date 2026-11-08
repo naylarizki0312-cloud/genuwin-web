@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk / Daftar - GenuWin</title>
+    
+    <link rel="icon" href="../uts5a/imagesuts/pavicon.png" type="image/png">
+    
+    <link rel="stylesheet" href="GenuWin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page-body">
+
+    <!-- Navbar Minimalis -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="GenuWin.html">
+                <img src="../uts5a/imagesuts/logo.png" alt="GenuWin Logo" class="img-logo">
+            </a>
+        </div>
+        <div class="auth-buttons">
+            <a href="GenuWin.html" class="btn-login">Kembali ke Beranda</a>
+        </div>
+    </nav>
+
+    <!-- Konten Utama Login -->
+    <main class="login-main-wrapper">
+        <div class="login-card-box">
+            
+            <div class="login-header-text">
+                <h2>Belajar di GenuWin, raih Beasiswa impian jadi lebih seru!</h2>
+                <p>Yuk, daftar atau masuk sekarang. <strong>GRATIS!</strong></p>
+            </div>
+
+            <!-- Form Email Biasa -->
+            <form onsubmit="handleLoginSubmit(event)" class="login-form-area">
+                <div class="sub-form-group">
+                    <input type="text" placeholder="No. HP, Email atau Username" required class="sub-input">
+                </div>
+                <button type="submit" class="sub-btn-primary" style="width: 100%;">Lanjutkan</button>
+            </form>
+
+            <div class="clean-divider">
+                <span>atau</span>
+            </div>
+
+            <!-- Tombol Simulasi Google Sign-In -->
+            <button type="button" onclick="openGoogleModal()" class="google-signin-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
+                <span>Masuk dengan Google</span>
+            </button>
+
+        </div>
+    </main>
+
+    <!-- SIMULASI MODAL GOOGLE SIGN-IN & GMAIL CONFIRMATION -->
+    <div id="googleModalOverlay" class="sub-modal-overlay">
+        <div class="google-modal-box">
+            
+            <!-- Logo Google Kecil di Atas -->
+            <div class="google-modal-top">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="width: 70px;">
+                <h3>Sign in with Google</h3>
+                <p>to continue to GenuWin</p>
+            </div>
+
+            <!-- STEP 1: INPUT EMAIL & PASSWORD -->
+            <div id="googleStep1">
+                <form onsubmit="handleGoogleAuth(event)">
+                    <div class="sub-form-group" style="margin-bottom: 15px;">
+                        <input type="email" id="googleEmailInput" placeholder="Email atau ponsel" required class="sub-input">
+                    </div>
+                    <div class="sub-form-group" style="margin-bottom: 25px;">
+                        <input type="password" id="googlePassInput" placeholder="Masukkan sandi Anda" required class="sub-input">
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <button type="button" class="sub-btn-secondary" onclick="closeGoogleModal()">Batal</button>
+                        <button type="submit" class="sub-btn-primary">Berikutnya</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- STEP 2: SUKSES + CENTANG HIJAU + INFO GMAIL -->
+            <div id="googleStepSuccess" style="display: none; text-align: center; padding: 20px 0;">
+                <div class="success-checkmark-circle" style="margin: 0 auto 15px auto;">
+                    <div class="success-checkmark">✓</div>
+                </div>
+                <h3 style="color: #2e7d32; margin-bottom: 10px;">Autentikasi Berhasil!</h3>
+                <p class="sub-step-desc" style="font-size: 13px; line-height: 1.6;">
+                    Tunggu konfirmasi masuk & aktivasi di <strong>Gmail</strong> kamu.<br>
+                    <span style="color: #666; font-size: 12px;">(Silakan cek kotak masuk email Anda untuk mengaktifkan akun GenuWin).</span>
+                </p>
+                <button type="button" class="sub-btn-primary" onclick="closeGoogleModal()" style="margin-top: 15px;">Selesai</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 GenuWin. All Rights Reserved.</p>
+        <p>Designed by <strong>Nayla Rizki Asri Ainun</strong></p>
+    </footer>
+
+    <script src="GenuWin.js"></script>
+</body>
+</html>

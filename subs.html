@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe & Join GenuWin</title>
+    
+    <link rel="icon" href="../uts5a/imagesuts/pavicon.png" type="image/png">
+    
+    <link rel="stylesheet" href="GenuWin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="sub-body">
+
+    <!-- Navbar Utama -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="GenuWin.html">
+                <img src="../uts5a/imagesuts/logo.png" alt="Genuwin Logo" class="img-logo">
+            </a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">About</a>
+                <div class="dropdown-content">
+                    <a href="profil.html">Profil</a>
+                    <a href="sejarah.html">Sejarah</a>
+                    <a href="visi-misi.html">Visi Misi</a>
+                    <a href="tujuan.html">Tujuan</a>
+                    <a href="struktur.html">Struktur</a>
+                </div>
+            </li>
+            <li><a href="fabu.html">FABU</a></li>
+            <li><a href="mentor.html">Mentor Unggulan</a></li>
+            <li><a href="ruang-belajar.html">Ruang Belajar</a></li>
+            <li><a href="ruang-uji.html">Ruang Uji</a></li>
+            <li><a href="ukbi.html">UKBI Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="subs.html" class="btn-subscribe active-link">Subscribe</a>
+            <a href="login.html" class="btn-login">Masuk/Daftar</a>
+        </div>
+    </nav>
+
+    <!-- Background Halaman / Tombol Panggil Modal -->
+    <main class="sub-main-content">
+        <div class="sub-hero-card">
+            <h1>Bergabung dengan Komunitas GenuWin</h1>
+            <p>Dapatkan akses informasi eksklusif Beasiswa Unggulan dan pendampingan intensif bersama mentor.</p>
+            <button onclick="openModal()" class="sub-open-modal-btn">Mulai Pendaftaran (Join GenuWin)</button>
+        </div>
+    </main>
+
+    <!-- MODAL POPUP MULTI-LANGKAH -->
+    <div id="subModalOverlay" class="sub-modal-overlay">
+        <div class="sub-modal-box">
+            
+            <!-- Tombol Close (X) -->
+            <button class="sub-close-btn" onclick="closeModal()">&times;</button>
+
+            <!-- Progress Bar Langkah (Step 1 & Step 2) -->
+            <div class="sub-steps-indicator">
+                <div class="sub-step-tab active" id="tabIndicator1">
+                    <span class="step-num">1</span> Wilayah
+                </div>
+                <div class="step-arrow">&rsaquo;</div>
+                <div class="sub-step-tab" id="tabIndicator2">
+                    <span class="step-num">2</span> Application
+                </div>
+            </div>
+
+            <!-- ================= STEP 1: PILIH KOTA ADMINISTRASI DKI JAKARTA ================= -->
+            <div id="subStep1" class="sub-step-content active">
+                <h2>Pilih Kota Administrasi</h2>
+                <p class="sub-step-desc">Pilih wilayah Kota Administrasi di DKI Jakarta tempat asal atau domisili kegiatanmu.</p>
+                
+                <div class="sub-form-group">
+                    <label>Kota Administrasi DKI Jakarta</label>
+                    <div class="sub-select-box" onclick="toggleDropdown()">
+                        <span id="selectedCountry">Jakarta Utara</span>
+                        <span>▼</span>
+                    </div>
+                    <!-- Dropdown Pilihan Kota -->
+                    <div id="countryDropdownList" class="sub-dropdown-list">
+                        <div onclick="selectCountry('Jakarta Utara')">Jakarta Utara</div>
+                        <div onclick="selectCountry('Jakarta Pusat')">Jakarta Pusat</div>
+                        <div onclick="selectCountry('Jakarta Selatan')">Jakarta Selatan</div>
+                        <div onclick="selectCountry('Jakarta Timur')">Jakarta Timur</div>
+                        <div onclick="selectCountry('Jakarta Barat')">Jakarta Barat</div>
+                        <div onclick="selectCountry('Kepulauan Seribu')">Kepulauan Seribu</div>
+                    </div>
+                </div>
+
+                <div class="sub-modal-footer">
+                    <button type="button" class="sub-btn-primary" onclick="goToStep2()">Next &rsaquo;</button>
+                </div>
+            </div>
+
+            <!-- ================= STEP 2: FORMULIR PENDAFTARAN LENGKAP ================= -->
+            <div id="subStep2" class="sub-step-content" style="display: none;">
+                <div class="selected-badge">
+                    <span>📍 Wilayah Domisili: <span id="badgeCountry">Jakarta Utara</span></span>
+                </div>
+
+                <h2>Join GenuWin</h2>
+                <p class="sub-step-desc">Lengkapi data diri di bawah ini untuk memulai perjalanan beasiswamu.</p>
+
+                <!-- Form Pendaftaran -->
+                <form id="applicationForm" onsubmit="handleFormSubmit(event)">
+                    
+                    <div class="sub-row-2">
+                        <div class="sub-form-group">
+                            <label>Nama Depan (First name)</label>
+                            <input type="text" placeholder="Contoh: Nayla" required class="sub-input">
+                        </div>
+                        <div class="sub-form-group">
+                            <label>Nama Belakang (Last name)</label>
+                            <input type="text" placeholder="Contoh: Rizki" required class="sub-input">
+                        </div>
+                    </div>
+
+                    <div class="sub-form-group">
+                        <label>Tanggal Lahir (Date of birth)</label>
+                        <input type="date" required class="sub-input">
+                    </div>
+
+                    <div class="sub-form-group">
+                        <label>Email Aktif</label>
+                        <input type="email" placeholder="nama@email.com" required class="sub-input">
+                    </div>
+
+                    <div class="sub-row-phone">
+                        <div class="sub-form-group" style="flex: 1;">
+                            <label>Kode Negara</label>
+                            <select class="sub-input">
+                                <option>+62 (ID)</option>
+                            </select>
+                        </div>
+                        <div class="sub-form-group" style="flex: 2; margin-top: 24px;">
+                            <input type="tel" placeholder="8123456789" required class="sub-input">
+                        </div>
+                    </div>
+
+                    <div class="sub-form-group-checkbox">
+                        <input type="checkbox" id="whatsappCheck">
+                        <label for="whatsappCheck">Saya bersedia dihubungi melalui nomor telepon/WhatsApp ini.</label>
+                    </div>
+
+                    <div class="sub-form-group">
+                        <label>Apa motivasi utamamu bergabung dengan GenuWin?</label>
+                        <select class="sub-input">
+                            <option>Mempersiapkan diri menghadapi Beasiswa Unggulan</option>
+                            <option>Mengikuti pelatihan esai & wawancara</option>
+                            <option>Berlatih dan mengukur kemampuan via UKBI Center</option>
+                            <option>Bergabung dengan komunitas mentor & relawan literasi</option>
+                        </select>
+                    </div>
+
+                    <div class="sub-form-group">
+                        <label>Asal Universitas / Instansi</label>
+                        <input type="text" placeholder="Contoh: UIN Syarif Hidayatullah Jakarta" required class="sub-input">
+                    </div>
+
+                    <!-- Tombol Aksi Step 2 -->
+                    <div class="sub-modal-footer-flex">
+                        <button type="button" class="sub-btn-secondary" onclick="goToStep1()">Back</button>
+                        <button type="submit" class="sub-btn-primary">Send Application</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- ================= STEP 3: SUKSES (CENTANG HIJAU + TING) ================= -->
+            <div id="subStepSuccess" class="sub-step-content" style="display: none; text-align: center; padding: 40px 0;">
+                <div class="success-checkmark-circle">
+                    <div class="success-checkmark">✓</div>
+                </div>
+                <h2 style="color: #2e7d32; margin-top: 20px;">Proses Berhasil!</h2>
+                <p class="sub-step-desc">Pendaftaran dan data aplikasimu di GenuWin telah berhasil dikirim. Tim kami akan segera memproses datamu.</p>
+                <button type="button" class="sub-btn-primary" onclick="closeModal()" style="margin-top: 20px;">Selesai</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 GenuWin. All Rights Reserved.</p>
+        <p>Designed by <strong>Nayla Rizki Asri Ainun</strong></p>
+    </footer>
+
+    <script src="GenuWin.js"></script>
+</body>
+</html>
